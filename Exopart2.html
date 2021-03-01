@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    var prixU = 9.99
+    var quantité = 5
+    var tauxTVA = 0.2
+
+    var totalHT = prixU*quantité
+    var totalTTC = totalHT + (totalHT * tauxTVA)
+
+    var final = totalTTC.toFixed(2)
+
+
+    console.log("Prix unitaire de l’article :" + prixU +"€")
+    console.log("Quantité :"+ quantité)
+    console.log("Taux de TVA :"+ tauxTVA)
+    console.log("Le montant de la facture à régler est de :" + final +"€")
+
+    var age = 10
+
+    switch(age){
+        case 6 : result = "Poussin"
+            break
+        case 7 : result ="Poussin"
+            break
+        case 8 : result ="Pupille"
+            break
+        case 9 : result ="Pupille"
+            break
+        case 10 : result ="Minime"
+            break
+        case 11 : result ="Minime"
+            break
+        case 12 : result ="Cadet"
+            break
+        default : result ="Autre"
+    }
+    console.log("L’enfant qui a "+ age +" ans appartient à la catégorie "+result)
+
+
+        let resultat
+
+        if(age >= 12){
+            resultat = "Cadet"
+        }
+        else if(age >= 10){
+            resultat = "Minime"
+        }
+        else if(age >=8){
+            resultat = "Pupille"
+        }
+        else if(age >=6){
+            resultat = "Poussin"
+        }
+        else{
+            resultat = "Non pris en compte"
+        }
+
+        console.log("L’enfant qui a "+ age +" ans appartient à la catégorie "+resultat)
+
+
+
+
+
+
+        function tableFor(nb){
+            for(var i = 1; i <= 10; i++ ){
+                var result = nb * i
+                console.log(nb +" x "+ i + " = "+result)
+            }
+
+        }
+
+    tableFor(8)
+        
+
+
+    function tableWhile(nb){
+        var j = 1
+        
+
+        while(j<=10){
+
+            var result =nb*j
+            console.log(nb +" x "+ j + " = "+result)
+            j++
+        }
+    }
+
+   tableWhile(8)
+
+        var age = 32
+        var sexe = "f"
+
+        if(sexe === "f" && age >= 18 && age <=35 || sexe ==="h" && age > 20){
+            var rep = "imposable"
+        }
+        else{
+            var rep = " non imposable"
+        }
+
+        console.log("Age : "+age)
+        console.log("Sexe : "+sexe)
+        console.log("La personne est "+rep)
+
+
+        let montantAP = 152
+        let montantAV = 200
+        let reste = montantAV - montantAP
+        let restefinal = montantAV - montantAP
+
+        
+
+       let billets10 = Math.floor(reste/10)
+            reste = reste -(billets10*10)
+       let billets5 = Math.floor(reste/5)
+            reste = reste - (billets5*5)
+       let pieces2 = Math.floor(reste/2)
+          let  pieces1 = reste -(pieces2*2)
+
+        console.log("Montant à payer : "+montantAP)
+        console.log("Montant versé : "+montantAV)
+        console.log("Reste à payer : "+restefinal)
+        console.log("Rendue de monnaie :")
+        console.log(billets10+" billets de 10 € - "+billets5+" billets de 5 € - "+pieces2+" pieces de 2 € - "+pieces1+" pieces de 1 €")
+
+    </script>
+
+
+</body>
+</html>
